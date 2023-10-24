@@ -4,7 +4,9 @@ function logPromiseStatus({ position, delay, isFulfilled }) {
   const status = isFulfilled ? 'Fulfilled' : 'Rejected';
   const emoji = isFulfilled ? '✅' : '❌';
   const message = `${emoji} ${status} promise ${position} in ${delay}ms`;
-  isFulfilled ? Notiflix.Notify.Success(message) : Notiflix.Notify.Failure(message);
+  isFulfilled 
+  ? Notiflix.Notify.success(message) 
+  : Notiflix.Notify.failure(message);
 }
 
 function createPromise(position, delay) {

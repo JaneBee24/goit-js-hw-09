@@ -1,6 +1,7 @@
 import flatpickr from 'flatpickr';
 import "flatpickr/dist/flatpickr.min.css";
-import Notiflix from 'notiflix';
+import * as Notiflix from 'notiflix';
+
 
 const datetimePicker = document.getElementById('datetime-picker');
 const startButton = document.querySelector('[data-start]');
@@ -81,10 +82,3 @@ startButton.addEventListener('click', () => {
   }, 1000);
 });
 
-function stopTimer() {
-  clearInterval(countdownInterval);
-  updateTimerInterface({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  targetDate = null;
-}
-
-document.querySelector('[data-stop]').addEventListener('click', stopTimer);
