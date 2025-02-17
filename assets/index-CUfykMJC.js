@@ -11,4 +11,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         <img class="gallery-image" src="${C}" alt="${p}" />
       </a>
     </li>
-  `).join("");_.innerHTML=z;new R(".gallery a",{captionsData:"alt",captionDelay:250,enableKeyboard:!0});
+  `).join("");_.innerHTML=z;new R(".gallery a",{captionsData:"alt",captionDelay:250});
