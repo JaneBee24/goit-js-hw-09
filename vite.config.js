@@ -1,5 +1,4 @@
-import { defineConfig } from 'vite';
-import { glob } from 'glob';
+import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig(({ command }) => {
   return {
@@ -24,5 +23,8 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+    plugins: [
+      injectHTML(), 
+    ],
   };
 });
